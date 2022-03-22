@@ -32,9 +32,21 @@ function mediaNotas() {
             let resultadoMedia = Number(resultadoSoma / quantidadeNotas);
             alert(`A Média das notas ${nota.join(' - ')} é igual a: ${resultadoMedia} `);
 
-            novaMedia();
+            resultadoFinal();
 
+            function resultadoFinal(){
+                if(resultadoMedia <= 5.0){
+                    alert('Reprovado!🤦‍♂️');
+                    novaMedia();
+                } else if(resultadoMedia <= 7.0){
+                    alert('Recuperação!😒');
+                    novaMedia();
+                }else{
+                    alert('Aprovado!😎');
+                    novaMedia();
+                }            
         }
+    }
     }
     
     function novaMedia() {
