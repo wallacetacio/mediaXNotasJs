@@ -30,7 +30,7 @@ function mediaNotas() {
             }
 
             let resultadoMedia = Number(resultadoSoma / quantidadeNotas);
-            alert(`A Média das notas ${nota} é igual a: ${resultadoMedia} `);
+            alert(`A Média das notas ${nota.join(' - ')} é igual a: ${resultadoMedia} `);
 
             novaMedia();
 
@@ -45,6 +45,9 @@ function mediaNotas() {
         } else if (opcao == 2) {
             alert('Obrigado! Até a próxima.🙋‍♂️');
             System
+        }else{
+            alert('Opção inválida!');
+            novaMedia();
         }
     }
 }
