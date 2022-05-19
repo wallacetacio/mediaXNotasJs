@@ -14,8 +14,8 @@ function mediaNotas() {
             for (let i = 0; i < quantidadeNotas; i++) {
                 nota[i] = Number(prompt(`Digite a nota ${i + 1}:`));
 
-                if (isNaN(nota[i])) {
-                    alert('Digite apenas números e decimais separados pos ponto".".');
+                if (isNaN(nota[i]) || nota[i] > 10) {
+                    alert('Digite apenas números e decimais separados pos ponto"." e menores que 10.0.');
                     lerNotas();
                     break;
 
