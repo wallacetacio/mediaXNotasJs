@@ -2,7 +2,7 @@ function mediaNotas() {
     let quantidadeNotas = Number(prompt('Digite o número de notas:'));
 
     if (!quantidadeNotas || quantidadeNotas <= 1) {
-        alert('Digite um número maiores ou igual a dois!');
+        alert('Digite um número maior ou igual a dois!');
         mediaNotas();
 
     } else {
@@ -24,11 +24,10 @@ function mediaNotas() {
                 }
             }
 
-            let resultadoSoma = 0;
-            for (let ind = 0; ind < nota.length; ind++) {
-                resultadoSoma = nota[ind] + resultadoSoma;
-            }
+            const valorInicial = 0;
+            const resultadoSoma = nota.reduce((valorAnterior, valorAtual) => valorAnterior + valorAtual, valorInicial);
 
+           
             let resultadoMedia = Number(resultadoSoma / quantidadeNotas);
             alert(`A Média das notas ${nota.join(' - ')} é igual a: ${resultadoMedia} `);
 
