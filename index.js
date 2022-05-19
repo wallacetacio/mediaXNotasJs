@@ -1,5 +1,5 @@
 function mediaNotas() {
-    let quantidadeNotas = Number(prompt('digite o número de notas:'));
+    let quantidadeNotas = Number(prompt('Digite o número de notas:'));
 
     if (!quantidadeNotas || quantidadeNotas <= 1) {
         alert('Digite um número maiores ou igual a dois!');
@@ -56,7 +56,7 @@ function mediaNotas() {
             mediaNotas();
         } else if (opcao == 2) {
             alert('Obrigado! Até a próxima.🙋‍♂️');
-            System
+            process.exit();
         }else{
             alert('Opção inválida!');
             novaMedia();
